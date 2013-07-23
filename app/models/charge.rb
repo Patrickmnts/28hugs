@@ -3,10 +3,6 @@ class Charge < ActiveRecord::Base
 
 	def self.charge_machine
 
-    # Set your secret key: remember to change this to your live secret key in production
-    # See your keys here https://manage.stripe.com/account
-    Stripe.api_key = "sk_k4XKAXwn5PpyQmLM3ChOKR4ncHfCh"
-
     @subscribers = Subscriber.where(ship_date: Date.today)
 
     @subscribers.each do |s|
