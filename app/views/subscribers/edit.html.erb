@@ -1,4 +1,105 @@
+<div class="span8 offset2 create_form">
+  <h2>Welcome <%= @subscriber.first_name %></h2>
+  <%= form_for(@subscriber) do |f| %>
+    <% if @subscriber.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@subscriber.errors.count, "error") %> prohibited this subscriber from being saved:</h2>
 
- <%= render 'form' %>
+        <ul>
+        <% @subscriber.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="row">
+      <div class="span6">
+        <h4>Personal Info</h4>
+        <div class="field">
+          <%= f.label :first_name %><br>
+          <%= f.text_field :first_name %>
+        </div>
+        <div class="field">
+          <%= f.label :last_name %><br>
+          <%= f.text_field :last_name %>
+        </div>
+        <div class="field">
+          <%= f.label :phone %><br>
+          <%= f.text_field :phone %>
+        </div>
+        <div class="field">
+          <%= f.label :email %><br>
+          <%= f.text_field :email %>
+        </div>
+        <div class="field">
+          <%= f.label :password %><br>
+          <%= f.password_field :password %>
+        </div>
+        <div class="field">
+          <%= f.label :password_confirmation, "Confirmation" %>
+          <%= f.password_field :password_confirmation %>
+        </div>
+      </div>
+
+      <div class="span6">
+        <h4>Payment Information</h4>
+        <div class="field">
+          <%= f.label :billing_address %><br>
+          <%= f.text_field :billing_address %>
+        </div>
+        <div class="field">
+          <%= f.label :billing_city %><br>
+          <%= f.text_field :billing_city %>
+        </div>
+        <div class="field">
+          <%= f.label :billing_state %><br>
+          <%= f.text_field :billing_state %>
+        </div>
+        <div class="field">
+          <%= f.label :billing_zip %><br>
+          <%= f.text_field :billing_zip %>
+        </div>
+        <div class="field">
+          <%= f.label :ship_date %><br>
+          <%= f.date_select :ship_date %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span6">
+        <h4> Where to?? </h4>
+        <div class="field">
+          <%= f.label :recipient_name %><br>
+          <%= f.text_field :recipient_name %>
+        </div>
+        <div class="field">
+          <%= f.label :recipient_address %><br>
+          <%= f.text_field :recipient_address %>
+        </div>
+        <div class="field">
+          <%= f.label :recipient_city %><br>
+          <%= f.text_field :recipient_city %>
+        </div>
+        <div class="field">
+          <%= f.label :recipient_state %><br>
+          <%= f.text_field :recipient_state %>
+        </div>
+        <div class="field">
+          <%= f.label :recipient_zip %><br>
+          <%= f.text_field :recipient_zip %>
+        </div>
+      </div>
+      <div class="span6 ph-form">
+        <%= image_tag('paperhearts.jpg', alt: 'paperhearts logo', id:"paperheart_subscriber_form") %>
+        <br>
+        <%= f.submit "Save Changes", class: 'btn btn-primary' %>
+        </form>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
 
 

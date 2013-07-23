@@ -10,6 +10,24 @@
   line-height: 30px;
   text-align: center;
   margin: 0 auto;
+  line-height: 0;
+  border: 5px solid #efefef;
+  border-radius: 40px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  a{
+    color: #A1109F;
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  h4 {
+    text-decoration: none;
+  }
+  h2 {
+    text-decoration: underline;
+  }
 }
 
 .faq h4 {
@@ -32,10 +50,6 @@
   list-style-type: none;
 }
 
-.faq a:visited {
-  color: #A1109F;
-}
-
 .nav li {
   padding: 5px;
 }
@@ -51,6 +65,13 @@
 #log_in_form {
   text-align: center;
   line-height: -1em;
+  border: 10px solid #efefef;
+  border-radius: 40px;
+  margin-bottom: 15px;
+}
+
+#imglog {
+  height: 25%;
 }
 
 #login-row {
@@ -113,6 +134,31 @@ table {
   margin-top: 75px;
   margin-bottom: 25px;
 }
+
+
+/* SUBSCRIBER LISTING PAGE */
+
+#subscriber-list {
+  border: 5px solid #efefef;
+  border-radius: 40px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+
+  h2{
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  table {
+    text-align: left;
+  }
+  td, tr{
+    padding: 0 5px;
+  }
+}
+
+/* LOGIN FORM */
+
 
 
 

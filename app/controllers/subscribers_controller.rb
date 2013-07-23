@@ -20,6 +20,7 @@ class SubscribersController < ApplicationController
 
   # GET /subscribers/1/edit
   def edit
+    @subscriber = Subscriber.find(params[:id])
   end
 
   # POST /subscribers
