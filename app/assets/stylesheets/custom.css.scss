@@ -53,8 +53,80 @@
   line-height: -1em;
 }
 
+#login-row {
+  margin-bottom: 10px;
+}
+
+#login-btn {
+  margin-right: 35px;
+}
+
+/* NEW SUBSCRIBER FORM */
 .create_form {
   text-align: center;
   line-height: 0;
+  border: 5px solid #efefef;
+  border-radius: 40px;
+  margin-bottom: 10px;
+
+  h4 {
+    text-decoration: underline;
+  }
 }
+
+#dropdown{
+  width: 0;
+}
+
+/*SUBSCRIBER SHOW PAGE*/
+.showinfo {
+  text-align: center;
+  line-height: 0;
+  border: 5px solid #efefef;
+  border-radius: 40px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+#show_greeting {
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+
+  td {
+    text-align: left;
+    line-height: 2em;
+  }
+}
+
+#show_form_bottom {
+  margin-top: 10px;
+}
+
+.ph-form {
+  margin-bottom: 10px;
+}
+
+#paperheart_subscriber_form {
+  margin-top: 75px;
+  margin-bottom: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
