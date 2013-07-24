@@ -1,7 +1,7 @@
 class Charge < ActiveRecord::Base
 	belongs_to :subscriber
 
-	def self.charge_machine
+	def self.daily_bulk_charge_runner
 
     @subscribers = Subscriber.where(ship_date: Date.today)
 

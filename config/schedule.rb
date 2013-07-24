@@ -4,7 +4,7 @@ job_type :runner, "cd :path && bin/rails runner -e :environment ':task' :output"
 
 
 every 2.minutes do
-  runner "Charge.charge_machine", :environment => :development
+  runner "Charge.daily_bulk_charge_runner", :environment => :development
   # command "echo 'hi' >> /Users/nonojojo/Dropbox/rails_projects/28hugs_/cron_log.log"
 end
 
