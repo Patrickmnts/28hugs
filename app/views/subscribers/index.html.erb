@@ -4,58 +4,27 @@
   <h2>Subscriber Master Index</h2>
   <table>
       <tr>
-        <th>Email</th>
-        <th>First</th>
         <th>Last</th>
+        <th>First</th>
+        <th>Email</th>
         <th>Phone</th>
-      </tr>
-      <tr class="hidden">
-        <th>Billing Address</th>
-        <th>B. City</th>
-        <th>B. State</th>
-        <th>B. Zip</th>
-        <th>Ship Date</th>
         <th>Stripe customer</th>
-        <th>Payment status</th>
-        <th>Recipient name</th>
-        <th>Recipient address</th>
-        <th>Recipient city</th>
-        <th>Recipient state</th>
-        <th>Recipient zip</th>
       </tr>
 
     <tbody>
       <% @subscribers.each do |subscriber| %>
         <tr>
-          <td><%= subscriber.email %></td>
-          <td><%= subscriber.first_name %></td>
           <td><%= subscriber.last_name %></td>
+          <td><%= subscriber.first_name %></td>
+          <td><%= subscriber.email %></td>
           <td><%= subscriber.phone %></td>
-          <td><a href="" id="more-info">More Info</a> |</td>
+          <td><%= subscriber.stripe_customer_id %></td>
           <td><%= link_to 'Show', subscriber %> | </td>
           <td><%= link_to 'Edit', edit_subscriber_path(subscriber) %> | </td>
           <td><%= link_to 'Destroy', subscriber, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
-        <tr class='hidden'>
-          <td><%= subscriber.billing_address %></td>
-          <td><%= subscriber.billing_city %></td>
-          <td><%= subscriber.billing_state %></td>
-          <td><%= subscriber.billing_zip %></td>
-          <td><%= subscriber.ship_date %></td>
-          <td><%= subscriber.stripe_customer_id %></td>
-          <td><%= subscriber.payment_status %></td>
-          <td><%= subscriber.recipient_name %></td>
-          <td><%= subscriber.recipient_address %></td>
-          <td><%= subscriber.recipient_city %></td>
-          <td><%= subscriber.recipient_state %></td>
-          <td><%= subscriber.recipient_zip %></td>
-        </tr>
       <% end %>
     </tbody>
   </table>
-
-  <br>
-
-    <%= link_to 'New Subscriber', new_subscriber_path, class: 'btn btn-success' %>
-  </div>
-</div>
+  </div
+></div>
