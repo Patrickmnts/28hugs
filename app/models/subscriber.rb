@@ -3,6 +3,15 @@ class Subscriber < ActiveRecord::Base
 	has_secure_password
   has_many :charges
 
+  def self.daily_charge_list
+   Subscriber.where(ship_date: Date.today)
+  end
+
+  def self.payment_status_updater
+
+    subscriber.update(payment_status) << subscriber.charges.last.paid_status
+  end
+
   validates :password, length: { minimum: 6 }
   before_save { self.email = email.downcase }
   before_create :create_remember_token

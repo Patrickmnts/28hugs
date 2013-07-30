@@ -29,7 +29,6 @@ class SubscribersController < ApplicationController
     # Get the credit card details submitted by the form
     token = params[:stripeToken]
 
-
     # Create a Customer
     customer = Stripe::Customer.create(
       :card => token,
@@ -39,11 +38,11 @@ class SubscribersController < ApplicationController
     params[:subscriber][:stripe_customer_id] = customer.id
 
     @subscriber = Subscriber.new(subscriber_params)
-      if @subscriber.save
-        redirect_to @subscriber, notice: 'Subscriber was successfully created.'
-      else
-        render 'new'
-      end
+    if @subscriber.save
+      redirect_to @subscriber, notice: 'Subscriber was successfully created.'
+    else
+      render 'new'
+    end
   end
 
   # PATCH/PUT /subscribers/1
