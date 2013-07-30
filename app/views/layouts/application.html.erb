@@ -8,53 +8,52 @@
 </head>
 <body>
 
-    <header class="navbar">
-      <div class="navbar-inner">
-        <!-- navbar container -->
-        <div class="container-fluid">
-          <div class="row-fluid">
-            <%= link_to image_tag("28-logo-top.png", alt: "28 day hug", class: "headerlogo"), '/' %>
-            <div class="socialbtns pull-right">
-              <%= link_to image_tag("socialbuttonsfbook.png", alt: "facebook logo/link", class:"headersocialnav"),'https://www.facebook.com/28dayhug'%>
-              <%= link_to image_tag("socialbuttonstwit.png", alt:"twitter logo/link", class:"headersocialnav"),'https://twitter.com/28dayhug'%>
-              <%= link_to image_tag("socialbuttonspint.png", alt:"pintrist logo/link", class:"headersocialnav"),'http://pinterest.com/28dayhug/'%>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- <div class="span1"> -->
-      <!-- < render "layouts/dig_bar" %> -->
-    <!-- </div> -->
-
-
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <%= link_to "Log in", login_path, class: "login btn btn-normal pull-right" %>
-        <%= link_to "Create Account", create_path, class: "login btn btn-normal pull-right" %>
-        <!-- <a href="#"class="user-btn pull-right">Log In</a> -->
-      </div>
-
-      <div class='row-fluid'>
-        <div class="span12">
-
-          <%= yield %>
-        </div>
-      </div>
-
-      <div class="row-fluid">
-        <div class="footerwrapper">
-          <div class="footerinner">
-            <h3> Thanks for visiting!</h3>
-            <br/>
-            <a href="/faq" class="contactheader">Help Desk & FAQ</a>
-            <br/>
-            <span class="copyright"> © 2011 Lovely Brands LLC All Rights Reserved </span>
+  <header class="navbar">
+    <div class="navbar-inner">
+      <!-- navbar container -->
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <%= link_to image_tag("28-logo-top.png", alt: "28 day hug", class: "headerlogo"), '/' %>
+          <div class="socialbtns pull-right">
+            <%= link_to image_tag("socialbuttonsfbook.png", alt: "facebook logo/link", class:"headersocialnav"),'https://www.facebook.com/28dayhug'%>
+            <%= link_to image_tag("socialbuttonstwit.png", alt:"twitter logo/link", class:"headersocialnav"),'https://twitter.com/28dayhug'%>
+            <%= link_to image_tag("socialbuttonspint.png", alt:"pintrist logo/link", class:"headersocialnav"),'http://pinterest.com/28dayhug/'%>
           </div>
         </div>
       </div>
     </div>
+  </header>
+  <!-- <div class="span1"> -->
+    <!-- < render "layouts/dig_bar" %> -->
+  <!-- </div> -->
 
 
+  <div class="container-fluid">
+    <div class="row-fluid" id="login-row">
+      <%= link_to "Log in", login_path, class: "login btn btn-normal pull-right", id: "login-btn" %>
+      <%= link_to "Create Account", create_path, class: "login btn btn-normal pull-right" %>
+      <!-- <a href="#"class="user-btn pull-right">Log In</a> -->
+    </div>
+
+    <div class='row-fluid'>
+      <div class="span10 offset1">
+
+        <%= yield %>
+
+      </div>
+    </div>
+
+    <div class="row-fluid">
+      <div class="footerwrapper">
+        <div class="footerinner">
+          <h3> Thanks for visiting!</h3>
+          <br/>
+          <a href="/faq" class="contactheader">Help Desk & FAQ</a>
+          <br/>
+          <span class="copyright"> © 2011 Lovely Brands LLC All Rights Reserved </span>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,59 +1,30 @@
-<h1>Listing subscribers</h1>
+<div class="row">
+  <div class="span10 offset1" id="subscriber-list">
 
-<table>
-  <thead>
-    <tr>
-      <th>Email</th>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Phone</th>
-      <th>Billing address</th>
-      <th>Billing city</th>
-      <th>Billing state</th>
-      <th>Billing zip</th>
-      <th>Ship date</th>
-      <th>Password digest</th>
-      <th>Stripe customer</th>
-      <th>Payment status</th>
-      <th>Recipient name</th>
-      <th>Recipient address</th>
-      <th>Recipient city</th>
-      <th>Recipient state</th>
-      <th>Recipient zip</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @subscribers.each do |subscriber| %>
+  <h2>Subscriber Master Index</h2>
+  <table>
       <tr>
-        <td><%= subscriber.email %></td>
-        <td><%= subscriber.first_name %></td>
-        <td><%= subscriber.last_name %></td>
-        <td><%= subscriber.phone %></td>
-        <td><%= subscriber.billing_address %></td>
-        <td><%= subscriber.billing_city %></td>
-        <td><%= subscriber.billing_state %></td>
-        <td><%= subscriber.billing_zip %></td>
-        <td><%= subscriber.ship_date %></td>
-        <td><%= subscriber.password_digest %></td>
-        <td><%= subscriber.stripe_customer_id %></td>
-        <td><%= subscriber.payment_status %></td>
-        <td><%= subscriber.recipient_name %></td>
-        <td><%= subscriber.recipient_address %></td>
-        <td><%= subscriber.recipient_city %></td>
-        <td><%= subscriber.recipient_state %></td>
-        <td><%= subscriber.recipient_zip %></td>
-        <td><%= link_to 'Show', subscriber %></td>
-        <td><%= link_to 'Edit', edit_subscriber_path(subscriber) %></td>
-        <td><%= link_to 'Destroy', subscriber, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Last</th>
+        <th>First</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Stripe customer</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New Subscriber', new_subscriber_path %>
+    <tbody>
+      <% @subscribers.each do |subscriber| %>
+        <tr>
+          <td><%= subscriber.last_name %></td>
+          <td><%= subscriber.first_name %></td>
+          <td><%= subscriber.email %></td>
+          <td><%= subscriber.phone %></td>
+          <td><%= subscriber.stripe_customer_id %></td>
+          <td><%= link_to 'Show', subscriber %> | </td>
+          <td><%= link_to 'Edit', edit_subscriber_path(subscriber) %> | </td>
+          <td><%= link_to 'Destroy', subscriber, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div
+></div>

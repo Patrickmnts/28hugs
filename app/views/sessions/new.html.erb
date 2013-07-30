@@ -1,6 +1,6 @@
 <% provide(:title, "Log in") %>
-<div class="row">
-  <div class="span6 offset3" id="log_in_form">
+<div class="row span6 offset3" id="log_in_form">
+  <div>
     <h1>Log in</h1>
     <%= form_for(:session, url: sessions_path) do |f| %>
 
@@ -15,7 +15,7 @@
       <%= f.submit 'Submit', class: 'btn btn-primary' %>
     <% end %>
 
-    <p>New to 28 Day Hug?? No Problem!! <%= link_to "Create Account Here", create_path %></p>
+    <p>New to 28 Day Hug?? No Problem!! <br><%= link_to "Create Account Here", create_path %></p>
     <br/>
   </div>
 </div>

@@ -1,88 +1,89 @@
-<p id="notice"><%= notice %></p>
-<p>
-  <strong>Email:</strong>
-  <%= @subscriber.email %>
-</p>
+<div class="span6 offset3" id="show_greeting">
+  <h3>Welcome, <%= @subscriber.first_name %></h3>
+</div>
 
-<p>
-  <strong>First name:</strong>
-  <%= @subscriber.first_name %>
-</p>
+<div class="showinfo span6 offset3">
 
-<p>
-  <strong>Last name:</strong>
-  <%= @subscriber.last_name %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @subscriber.phone %>
-</p>
+  <table>
+    <tr>
+      <td><strong>Email:</strong></td>
+      <td><%= @subscriber.email %></td>
+    </tr>
 
-<p>
-  <strong>Billing address:</strong>
-  <%= @subscriber.billing_address %>
-</p>
+    <tr>
+      <td><strong>First name:</strong></td>
+      <td><%= @subscriber.first_name %></td>
+    </tr>
 
-<p>
-  <strong>Billing city:</strong>
-  <%= @subscriber.billing_city %>
-</p>
-<p>
-  <strong>Billing state:</strong>
-  <%= @subscriber.billing_state %>
-</p>
+    <tr>
+      <td><strong>Last name:</strong></td>
+      <td><%= @subscriber.last_name %></td>
+    </tr>
 
-<p>
-  <strong>Billing zip:</strong>
-  <%= @subscriber.billing_zip %>
-</p>
+    <tr>
+      <td><strong>Phone:</strong></td>
+      <td><%= @subscriber.phone %></td>
+    </tr>
 
-<p>
-  <strong>Ship date:</strong>
-  <%= @subscriber.ship_date %>
-</p>
+    <tr>
+      <td><strong>Billing address:</strong></td>
+      <td><%= @subscriber.billing_address %></td>
+    </tr>
 
-<p>
-  <strong>Payment status:</strong>
-  <%= @subscriber.payment_status %>
-</p>
+    <tr>
+      <td><strong>Billing city:</strong></td>
+      <td><%= @subscriber.billing_city %></td>
+    </tr>
+    <tr>
+      <td><strong>Billing state:</strong></td>
+      <td><%= @subscriber.billing_state %></td>
+    </tr>
 
-<p>
-  <strong>Recipient name:</strong>
-  <%= @subscriber.recipient_name %>
-</p>
+    <tr>
+      <td><strong>Billing zip:</strong></td>
+      <td><%= @subscriber.billing_zip %></td>
+    </tr>
 
-<p>
-  <strong>Recipient address:</strong>
-  <%= @subscriber.recipient_address %>
-</p>
+    <tr>
+      <td><strong>Ship date:</strong></td>
+      <td><%= @subscriber.ship_date %></td>
+    </tr>
 
-<p>
-  <strong>Recipient city:</strong>
-  <%= @subscriber.recipient_city %>
-</p>
+    <tr>
+      <td><strong>Payment status:</strong></td>
+      <td><%= @subscriber.payment_status %></td>
+    </tr>
 
-<p>
-  <strong>Recipient state:</strong>
-  <%= @subscriber.recipient_state %>
-</p>
+    <tr>
+      <td><strong>Recipient name:</strong></td>
+      <td><%= @subscriber.recipient_name %></td>
+    </tr>
 
-<p>
-  <strong>Recipient zip:</strong>
-  <%= @subscriber.recipient_zip %>
-</p>
+    <tr>
+      <td><strong>Recipient address:</strong></td>
+      <td><%= @subscriber.recipient_address %></td>
+    </tr>
 
-<%= link_to 'Edit', edit_subscriber_path(@subscriber) %> |
-<%= link_to 'Back', subscribers_path %>
+    <tr>
+      <td><strong>Recipient city:</strong></td>
+      <td><%= @subscriber.recipient_city %></td>
+    </tr>
 
-<h4>Recent Transactions:</h4>
-<%= @subscriber.charges.each do  |charge| %>
-  <div class="well">
-    <p><h4>Charge</h4></p>
-    Credit Card Last 4: <%= charge.last_4 %> ----
-    Payment Status: <%= charge.paid_status %> ----
-    Payment Created: <%= charge.created_at %>
-  </div>
-<% end %>
+    <tr>
+      <td><strong>Recipient state:</strong></td>
+      <td><%= @subscriber.recipient_state %></td>
+    </tr>
+
+    <tr>
+      <td><strong>Recipient zip:</strong></td>
+      <td><%= @subscriber.recipient_zip %></td>
+    </tr>
+  </table>
+    <div id="show_form_bottom">
+      <%= link_to 'Edit', edit_subscriber_path(@subscriber), class: "btn btn-primary" %> |
+      <%= link_to 'Back', '/', class: "btn btn-primary" %>
+    </div>
+</div>
 
