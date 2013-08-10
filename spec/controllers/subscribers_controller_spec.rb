@@ -23,7 +23,7 @@ describe SubscribersController do
   # This should return the minimal set of attributes required to create a valid
   # Subscriber. As you add validations to Subscriber, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "email" => "MyString" } }
+  let(:valid_attributes) { { "email" => "email@example.com", "password" => "passy123", "password_confirmation" => "passy123", "first_name" => "testname", "last_name" => "testlastname"} }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in

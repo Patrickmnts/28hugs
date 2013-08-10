@@ -11,7 +11,6 @@ describe "subscribers/edit" do
       :billing_city => "MyString",
       :billing_state => "MyString",
       :billing_zip => "MyString",
-      :password_digest => "MyString",
       :stripe_customer_id => "MyString",
       :payment_status => "MyString",
       :recipient_name => "MyString",
@@ -35,7 +34,6 @@ describe "subscribers/edit" do
       assert_select "input#subscriber_billing_city[name=?]", "subscriber[billing_city]"
       assert_select "input#subscriber_billing_state[name=?]", "subscriber[billing_state]"
       assert_select "input#subscriber_billing_zip[name=?]", "subscriber[billing_zip]"
-      assert_select "input#subscriber_password_digest[name=?]", "subscriber[password_digest]"
       assert_select "input#subscriber_stripe_customer_id[name=?]", "subscriber[stripe_customer_id]"
       assert_select "input#subscriber_payment_status[name=?]", "subscriber[payment_status]"
       assert_select "input#subscriber_recipient_name[name=?]", "subscriber[recipient_name]"
